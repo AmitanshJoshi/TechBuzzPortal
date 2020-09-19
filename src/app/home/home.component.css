@@ -1,0 +1,63 @@
+.container-fluid {
+    margin-left : 0px;
+    margin-right : 0px;
+    background: linear-gradient(45deg, #CCFFFF , #FFCCCC, rgb(150, 204, 255));
+    opacity : 0.7;
+    height: 495px;
+}
+.container-fluid1 {
+    margin-left : 0px;
+    margin-right : 0px;
+   margin-top: 0px;
+    opacity : 0.7;
+    height: 500px;
+}
+body {
+    font-family: sans-serif;
+}
+.margin {
+    padding-top: 180px;
+    text-transform: uppercase;
+}
+.margin1{
+    padding-top: 0px;
+}
+#register{
+    float: right !important;
+}
+.navbar{
+    margin-top : 10px;
+}
+.col-sm-7{
+    padding-right: 20px;
+}
+.col-sm-5{
+    padding-left: 30px;
+}
+input, textarea {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0px !important;
+}
+.socialMedia {
+    margin-bottom: 10px;
+}
+.social {
+    margin : 5px;
+}
+.fa-facebook-square:hover{
+    color: midnightblue;
+}
+.fa-linkedin-square:hover{
+ color : mediumblue;
+}
+.fa-git:hover{
+    color: orange;
+}
+.fa-instagram:hover{
+    color : deeppink;
+}
+.fa-send:hover{
+    color: blue;
+}

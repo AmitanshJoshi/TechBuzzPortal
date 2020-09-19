@@ -1,0 +1,25 @@
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<div class="row" *ngIf="testService.questions && this.testService.quesProgress != 10">
+  <div class="col s8 offset-s2">
+    <span class="h2 align-center">Time Elapsed : {{testService.displayTimeElapsed()}}</span>
+    <div class="progress">
+      <div class="determinate" [style.width.%]="(testService.quesProgress+1)*10"></div>
+    </div>
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">{{testService.quesProgress+1}}</span>
+        <p>{{testService.questions[testService.quesProgress].Qn}}</p>
+      </div>
+      <div class="card-action">
+        <ul class="collection answer">
+          <ng-container *ngFor="let option of testService.questions[testService.quesProgress].Options;let i = index">
+            <li *ngIf="option != null" class="collection-item" (click)="Answer(testService.questions[testService.quesProgress].QnID,i)">
+              {{option}}
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
