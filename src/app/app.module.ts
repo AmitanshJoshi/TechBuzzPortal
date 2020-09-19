@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ExploreComponent } from './explore/explore.component';
 import { TaketestComponent } from './taketest/taketest.component';
 import { TestService } from './shared/test.service';
+import {} from './shared/getjobs.service';
 
 @NgModule({
   declarations: [

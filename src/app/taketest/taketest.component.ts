@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Compiler } from '@angular/core'
 import { Router } from '@angular/router';
+import { FormsModule} from '@angular/forms'
 import { TestService } from '../shared/test.service';
 
 @Component({

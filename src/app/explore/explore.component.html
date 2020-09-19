@@ -1,3 +1,23 @@
-<p>
-  explore works!
-</p>
+<div class="explore">
+<input id="search" type="text" name="title" placeholder="Enter job title/description" >
+<br>
+<button class=" searchBtn btn btn-primary" (click)="getJobsByTitle(title)">Search</button>
+</div>
+
+  <div class="card" *ngFor="let jobs of allJobs ">
+    <div class="card-header">
+      {{jobs.JobTitle}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{jobs.Company}}</h5>
+      <div class="card-text">
+        <p>Job Roles/Responsibilities: {{jobs.JobDesc}}</p>
+        <span>Experience required : {{jobs.Experience}}</span>
+        <p>Experience required : {{jobs.PostedBy}}</p>
+        <p>Category : {{jobs.Category}}</p>
+        <p>Location : {{jobs.Location}}</p>
+      </div>
+      <a href="#" class="btn btn-primary">Apply Now</a>
+    </div>
+  </div>
+
