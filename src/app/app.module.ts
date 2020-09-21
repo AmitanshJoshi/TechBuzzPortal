@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ExploreComponent } from './explore/explore.component';
 import { TaketestComponent } from './taketest/taketest.component';
 import { TestService } from './shared/test.service';
-import {} from './shared/getjobs.service';
+import { GetjobsService } from './shared/getjobs.service';
+import { ResultComponent } from './result/result.component';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -22,13 +26,17 @@ import {} from './shared/getjobs.service';
     MaterialsComponent,
     FooterComponent,
     ExploreComponent,
-    TaketestComponent
+    TaketestComponent,
+    ResultComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ChartsModule
   ],
   providers: [
     TestService

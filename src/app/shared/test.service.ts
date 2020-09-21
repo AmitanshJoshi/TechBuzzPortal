@@ -21,6 +21,7 @@ export class TestService {
     return this.http.get(this.apiUrl + '/api/Questions');
   }
   getAnswers() {
+    debugger;
     var body = this.questions.map(x => x.QnID);
     return this.http.post(this.apiUrl + '/api/Answers', body);
   }

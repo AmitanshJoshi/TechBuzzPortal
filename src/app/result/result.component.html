@@ -1,0 +1,27 @@
+<h2 class="header" style="text-align :center; margin-top : 30px; height: 100px; ">Completed!</h2>
+<div class="row" style="height: 700px;">
+  <div class="col-sm-6">
+    <div class="card text-center" style="width: 25rem; margin-left : 200px;">
+        <img class="card-img-top" src="../../assets/trophy.png" style="width: 250px;height :250px; margin-left: 80px;">
+        <div class="card-body">
+          
+          <h3>{{testService.correctAnsCount}}/10</h3>
+          <h5>Front End Score : {{frontEnd}}</h5>
+          <h5>Back End score : {{backend}}</h5>
+          <h5>Database score : {{database}}</h5>
+          <h5>HTML score : {{HTML}}</h5>
+          <h5>CSS score : {{CSS}}</h5>
+          <span>Time Elapsed : {{testService.displayTimeElapsed()}}</span>
+        </div>
+    </div>
+    
+    
+    
+  </div>
+  <div class="col-sm-6" >
+    <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"></canvas>
+  </div>
+</div>

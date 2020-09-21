@@ -17,8 +17,8 @@ export class TaketestComponent implements OnInit {
     this._compiler.clearCache();
     if (parseInt(localStorage.getItem('seconds')) > 0) {
       this.testService.seconds = parseInt(localStorage.getItem('seconds'));
-      this.testService.quesProgress = parseInt(localStorage.getItem('qnProgress'));
-      this.testService.questions = JSON.parse(localStorage.getItem('qns'));
+      this.testService.quesProgress = parseInt(localStorage.getItem('quesProgress'));
+      this.testService.questions = JSON.parse(localStorage.getItem('questions'));
       if (this.testService.quesProgress == 10)
         this.router.navigate(['/result']);
       else
@@ -33,6 +33,7 @@ export class TaketestComponent implements OnInit {
           this.startTimer();
         }
       );
+      console.log(this.testService.questions);
     }
   }
 
@@ -44,6 +45,7 @@ export class TaketestComponent implements OnInit {
   }
 
   Answer(qID, choice) {
+    debugger;
     this.testService.questions[this.testService.quesProgress].answer = choice;
     localStorage.setItem('questions', JSON.stringify(this.testService.questions));
     this.testService.quesProgress++;
